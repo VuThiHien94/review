@@ -1,0 +1,22 @@
+<% if current_user.rated?(question.id).present? %>
+	<div class="alert alert-danger">
+		Bạn đã trả lời câu hỏi!
+	</div>
+<% else %>
+	<div class="question">
+		<h2 class="text-primary">Question <%= question.id %></h2>
+		<h4>File 1:</h4>
+		<audio controls="controls">
+			<source src="../<%= question.file1 %>" type="audio/wav">
+			Your browser does not support the audio element.
+		</audio>
+		<h4>File 2:</h4>
+		</br>
+		<audio controls="controls">
+			<source src="../<%= question.file2 %>" type="audio/wav">
+			Your browser does not support the audio element.
+		</audio>
+		</br>
+		<%= render "rates/form", question: question %>
+	</div>
+<% end %>

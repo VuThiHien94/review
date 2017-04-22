@@ -1,0 +1,28 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Ty le dung (%)</th>
+      <th>Ty le sai (%)</th>
+      <th>Diem danh gia (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td class="clickable-row">
+          <%= user.name %>
+        </td>
+        <td class="clickable-row">
+          <%= user.tyledung(user.id).round(2) %>
+        </td>
+        <td class="clickable-row">
+          <%= 100 - user.tyledung(user.id).round(2) %>
+        </td>
+        <td class="clickable-row">
+          <%= user.diemdanhgia(user.id).round(2) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

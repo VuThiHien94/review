@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.0.2'
 
 gem "devise"
+gem "bootstrap-sass", "3.3.6"
+gem "faker", "~> 1.6", ">= 1.6.6"
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

@@ -1,1 +1,16 @@
-Hello world
+<div class="well home">
+	<% if current_user.is_admin? %>
+		<%= link_to "Tong hop danh gia", admin_rates_path, class: "title" %></br>
+		<%= link_to "Ket qua", admin_rates_results_path, class: "title" %>
+	<% else %>
+		<div class="info">
+			Cảm ơn bạn đã tham gia khảo sát đánh giá này!</br>
+			Hãy trả lời những câu hỏi dưới đây.</br>
+			Bạn sẽ được nghe 2 file audio và hãy đánh giá mức độ giống nhau của 2 file đó.
+			<div class="text-danger">
+				Chú ý: cần nghe trong môi trường yên tĩnh, ít tiếng ồn để có thể đánh giá một cách chính xác nhất. :))
+			</div>
+		</div>
+		<%= link_to "Bắt đầu", question_path(@start), class: "btn btn-primary btn-md" %>
+	<% end %>
+</div>

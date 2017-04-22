@@ -1,0 +1,63 @@
+// Place all the styles related to the Questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body{
+    font-size: 100%;
+	background:	#fff;
+	font-family: LobsterTwo-Regular;
+}
+@font-face{
+   	font-family: LobsterTwo-Regular;
+	src:  font-url(LobsterTwo-Regular.ttf) format('truetype');
+}
+@font-face{
+   	font-family: OpenSans-Regular;
+	src:  font-url(OpenSans-Regular.ttf) format('truetype');
+}
+@font-face{
+   	font-family: LobsterTwo-Italic;
+	src:  font-url(LobsterTwo-Italic.ttf) format('truetype');
+}
+p{
+	margin:0;
+}
+ul,label{
+	margin:0;
+	padding:0;
+}
+body {
+  padding-top: 100px;
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+}
+
+body a:hover{
+	text-decoration:none;
+}
+
+.question{
+	margin-left: 15%;
+	padding: 0;
+}
+
+.title{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 125%;
+}
+
+.home{
+	text-align: center;
+}
+
+.info{
+	font-size: 150%;
+	margin-bottom: 30px;
+}
+
+.thanks{
+	text-align: center;
+	color: blue;
+	font-size: 150%;
+}

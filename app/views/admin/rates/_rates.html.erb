@@ -1,0 +1,32 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Question</th>
+      <th>Rate (%)</th>
+      <th>Flag</th>
+      <th>created_at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @rates.each do |rate| %>
+      <tr>
+        <td class="clickable-row">
+          <%= rate.user_id%>
+        </td>
+        <td class="clickable-row">
+          <%= rate.question_id %>
+        </td>
+        <td class="clickable-row">
+          <%= rate.rate %>
+        </td>
+        <td class="clickable-row">
+          <%= rate.flag %>
+        </td>
+        <td class="clickable-row">
+          <%= rate.created_at.strftime "%X %x" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

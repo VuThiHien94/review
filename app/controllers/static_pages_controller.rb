@@ -1,14 +1,9 @@
 class StaticPagesController < ApplicationController
   def home
-    
+    #@questions = Question.all
+    @start = Question.find(1);
   end
 
-  def help
-  end
-
-  def about
-  end
-
-  def contact
+  def thanks
   end
 end
