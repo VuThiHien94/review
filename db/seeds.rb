@@ -8,13 +8,8 @@
 User.create! name: "test", email: "test@gmail.com", password: "123456",
   is_admin: true
 
-10.times do |n|
-  name = Faker::Name.name
-  email = "test#{n+1}@gmail.com"
-  password = "123456"
-  User.create! name: name, email: email, password: password
-end
-
 Question.create! file1: "input.wav", file2: "output.wav", flag: 0
 Question.create! file1: "input.wav", file2: "input.wav", flag: 1
-
+Question.create! file1: "output.wav", file2: "input.wav", flag: 0
+Question.create! file1: "output.wav", file2: "output.wav", flag: 1
+Question.create! file1: "input.wav", file2: "output.wav", flag: 0
